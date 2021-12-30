@@ -68,6 +68,7 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
+$gamelist:    #B3005A !default;
 $blue:    #5e72e4 !default;
 $indigo:  #5603ad !default;
 $purple:  #8965e0 !default;
@@ -81,7 +82,7 @@ $cyan:    #2bffc6 !default;
 
 $colors: () !default;
 $colors: map-merge((
-  "blue":       $blue,
+  "blue":       $gamelist,
   "indigo":     $indigo,
   "purple":     $purple,
   "pink":       $pink,
@@ -99,7 +100,7 @@ $colors: map-merge((
 ), $colors);
 
 $default:       #172b4d !default;
-$primary:       #5e72e4 !default;
+$primary:       #B3005A !default;
 $secondary:     #f7fafc !default;
 $success:       $green !default;
 $info:          $teal !default;

@@ -9,7 +9,7 @@
       <b-col lg="6">
         <b-nav align="center" class="nav-footer justify-content-lg-end">
           <b-nav-item href="https://www.creative-tim.com"  target="_blank">
-            Creative Tim
+             SoftIndustries
           </b-nav-item>
           <b-nav-item href="https://www.creative-tim.com/presentation" target="_blank">
            About Us
