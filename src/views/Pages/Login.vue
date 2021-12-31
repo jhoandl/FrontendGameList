@@ -35,20 +35,19 @@
                 <b-form role="form" @submit.prevent="handleSubmit(onSubmit)">
                   <base-input alternative
                               class="mb-3"
-                              name="Email"
-                              :rules="{required: true, email: true}"
+                              name="Usuario"
+                              rules="required"
                               prepend-icon="ni ni-email-83"
-                              placeholder="Email"
-                              v-model="model.email">
+                              placeholder="Nombre de usuario"
+                              v-model="model.username">
                   </base-input>
-
                   <base-input alternative
                               class="mb-3"
-                              name="Password"
-                              :rules="{required: true, min: 6}"
+                              name="Contraseña"
+                              rules="required"
                               prepend-icon="ni ni-lock-circle-open"
                               type="password"
-                              placeholder="Password"
+                              placeholder="********"
                               v-model="model.password">
                   </base-input>
 
@@ -77,15 +76,24 @@
     data() {
       return {
         model: {
-          email: '',
+          username: '',
           password: '',
-          rememberMe: false
-        }
+        },
       };
     },
     methods: {
       onSubmit() {
-        // this will be called only after form is valid. You can do api call here to login
+        this.$refs.formValidator.validate().then(success => {
+          if (success) {
+            this.$http.post('/api/auth/singin', this.model)
+            .then(res => {
+              const userData = res.data
+              localStorage.setItem('userData', JSON.stringify(userData))
+              localStorage.setItem('accessToken', res.data.accessToken)
+              this.$router.push('/dashboard');
+            })
+          }
+        })
       }
     }
   };

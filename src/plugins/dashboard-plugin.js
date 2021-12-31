@@ -12,7 +12,7 @@ import GlobalDirectives from './globalDirectives';
 import SideBar from '@/components/SidebarPlugin';
 
 // element ui language configuration
-import lang from 'element-ui/lib/locale/lang/en';
+import lang from 'element-ui/lib/locale/lang/es';
 import locale from 'element-ui/lib/locale';
 locale.use(lang);
 
@@ -24,7 +24,7 @@ import '@/assets/scss/argon.scss';
 import '@/assets/vendor/nucleo/css/nucleo.css';
 import { extend } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
-import { messages } from 'vee-validate/dist/locale/en.json';
+import { messages } from 'vee-validate/dist/locale/es.json';
 
 Object.keys(rules).forEach(rule => {
   extend(rule, {

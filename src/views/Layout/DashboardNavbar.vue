@@ -39,7 +39,7 @@
                     <img alt="Image placeholder" src="img/theme/team-4.jpg">
                   </span>
             <b-media-body class="ml-2 d-none d-lg-block">
-              <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+              <span class="mb-0 text-sm  font-weight-bold">{{username}}</span>
             </b-media-body>
           </b-media>
         </a>
@@ -47,7 +47,7 @@
         <template>
 
           <b-dropdown-header class="noti-title">
-            <h6 class="text-overflow m-0">Welcome!</h6>
+            <h6 class="text-overflow m-0">Bienvenido!</h6>
           </b-dropdown-header>
           <b-dropdown-item href="#!">
             <i class="ni ni-single-02"></i>
@@ -104,8 +104,13 @@ export default {
       activeNotifications: false,
       showMenu: false,
       searchModalVisible: false,
-      searchQuery: ''
+      searchQuery: '',
+      username: '',
     };
+  },
+  created() {
+    const user = JSON.parse(localStorage.getItem('userData'))
+    this.username = user.username
   },
   methods: {
     capitalizeFirstLetter(string) {

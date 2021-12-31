@@ -17,11 +17,23 @@
 import Vue from 'vue';
 import DashboardPlugin from './plugins/dashboard-plugin';
 import App from './App.vue';
-
+import axios from 'axios'
 // router setup
 import router from './routes/router';
+
+const axiosIns = axios.create({
+  // You can add your headers here
+  baseURL: 'http://localhost:8081',
+  // timeout: 1000,
+  headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+})
+
+
+Vue.prototype.$http = axiosIns
+
 // plugin setup
 Vue.use(DashboardPlugin);
+Vue.use(axiosIns);
 
 /* eslint-disable no-new */
 new Vue({
