@@ -9,6 +9,9 @@
     "dev": "npm run serve"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.6",
     "axios": "^0.24.0",
     "bootstrap": "4.3.1",
     "bootstrap-vue": "^2.5.0",
@@ -31,9 +34,10 @@
     "vue-chartjs": "^3.5.0",
     "vue-clipboard2": "^0.3.0",
     "vue-flatpickr-component": "^8.1.2",
+    "vue-good-table": "^2.21.11",
+    "vue-i18n": "8.22.2",
     "vue-router": "^3.0.6",
-    "vue2-transitions": "^0.2.3",
-    "vue-i18n": "8.22.2"
+    "vue2-transitions": "^0.2.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",

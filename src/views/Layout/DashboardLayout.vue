@@ -11,6 +11,16 @@
           }"
         >
         </sidebar-item>
+        <sidebar-item
+          :link="{
+            name: 'Administración',
+            icon: 'ni ni-settings-gear-65 text-primary',
+          }"
+        >
+        <sidebar-item
+          :link="{ name: 'Usuarios', path: '/usuarios' }"
+        ></sidebar-item>
+        </sidebar-item>
 
         <sidebar-item
             :link="{
